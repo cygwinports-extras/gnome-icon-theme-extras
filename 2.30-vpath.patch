@@ -1,0 +1,11 @@
+--- origsrc/gnome-icon-theme-extras-2.30.1/src/Makefile.am	2010-03-04 10:03:39.000000000 -0600
++++ src/gnome-icon-theme-extras-2.30.1/src/Makefile.am	2010-06-08 02:25:37.747356200 -0500
+@@ -23,7 +23,7 @@ render: render-png
+ 
+ install-data-local:
+ 	for size in $(render_sizes); do \
+-		for file in `cd $(top_builddir)/$(SVGOUTDIR)/$$size; find . -name "*.png"`; do \
++		for file in `cd $(top_srcdir)/$(SVGOUTDIR)/$$size; find . -name "*.png"`; do \
+ 			context="`dirname $$file`"; \
+ 			$(mkdir_p) $(DESTDIR)$(themedir)/$$size/$$context; \
+ 			$(install_sh_DATA) $(top_srcdir)/$(SVGOUTDIR)/$$size/$$file $(DESTDIR)$(themedir)/$$size/$$file; \
