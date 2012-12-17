@@ -1,0 +1,10 @@
+inherit gnome2
+
+NAME="gnome-icon-theme-extras"
+VERSION=3.6.2
+RELEASE=1
+CATEGORY="GNOME"
+REQUIRES="hicolor-icon-theme gnome-icon-theme"
+SUMMARY="GNOME desktop icon theme (additional icons)"
+
+PATCH_URI="2.30-vpath.patch"
